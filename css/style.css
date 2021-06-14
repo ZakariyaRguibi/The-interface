@@ -8,3 +8,51 @@
 .text-secondary-me {
   color: #eeeeee !important;
 }
+.text-orange-me {
+  color: #dd7732 !important;
+}
+
+#main-container {
+  height: 100vh;
+}
+#typewriter-container h2 span.cursor {
+  display: inline-block;
+  background-color: #ccc;
+  margin-left: 0.1rem;
+  width: 3px;
+  animation: blink 0.5s infinite;
+}
+
+#typewriter-container h2 span.cursor.typing {
+  animation: none;
+}
+@keyframes blink {
+  0% {
+    background-color: #ccc;
+  }
+  49% {
+    background-color: #ccc;
+  }
+  50% {
+    background-color: transparent;
+  }
+  99% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: #ccc;
+  }
+}
+.btn-outline-secondary-me {
+  color: #ffd369;
+  border-color: #6c757d;
+  transition: 0.3s;
+}
+.btn-outline-secondary-me:hover {
+  color: #ffd369;
+  background-color: #393e46;
+  border-color: #eeeeee;
+}
+.btn-zoom-me:hover {
+  padding: 1rem 2rem;
+}

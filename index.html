@@ -14,13 +14,40 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body class="bg-dark-me">
-    <div class="container mt-auto">
-      <div class="row">img</div>
-      <div class="row">
+    <div id="main-container" class="container mt-auto">
+      <div class="row mt-4">
+        <div class="col-3 my-auto">
+          <img
+            src="media/ensa.png"
+            class="img-fluid rounded text-center"
+            alt="..."
+          />
+        </div>
+        <div class="col-6"></div>
+        <div class="col-2">
+          <img
+            src="media/uca.png"
+            class="img-fluid rounded text-center"
+            alt="..."
+          />
+        </div>
+      </div>
+      <div class="row my-5">
         <div class="col-12 text-center">
-          <h1 class="text-primary-me display-1">The Interface</h1>
-
-          <h2 class="text-secondary-me display-5">Monitor, Observe, Learn</h2>
+          <h1 class="text-primary-me display-2">The Interface</h1>
+          <!-- typewriter -->
+          <div id="typewriter-container" class="container">
+            <h2 class="text-secondary-me display-5">
+              Your platform to <span class="typed-text text-orange-me"></span
+              ><span class="cursor">&nbsp;</span>
+            </h2>
+            <button
+              type="button"
+              class="btn btn-outline-secondary-me btn-lg btn-zoom-me"
+            >
+              Click to Login!
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -28,5 +55,6 @@
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="js/jquery-3.5.1.slim.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/typewriter.js"></script>
   </body>
 </html>
