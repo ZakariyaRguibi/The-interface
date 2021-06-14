@@ -1,15 +1,15 @@
 .bg-dark-me {
-  background-color: #222831 !important;
+  background-color: #dbd3d8 !important;
 }
 
 .text-primary-me {
-  color: #ffd369 !important;
+  color: #754043 !important;
 }
 .text-secondary-me {
-  color: #eeeeee !important;
+  color: #223843 !important;
 }
 .text-orange-me {
-  color: #dd7732 !important;
+  color: #008dd5 !important;
 }
 
 #main-container {
@@ -17,7 +17,7 @@
 }
 #typewriter-container h2 span.cursor {
   display: inline-block;
-  background-color: #ccc;
+  background-color: #754043;
   margin-left: 0.1rem;
   width: 3px;
   animation: blink 0.5s infinite;
@@ -28,10 +28,10 @@
 }
 @keyframes blink {
   0% {
-    background-color: #ccc;
+    background-color: #754043;
   }
   49% {
-    background-color: #ccc;
+    background-color: #754043;
   }
   50% {
     background-color: transparent;
@@ -40,19 +40,20 @@
     background-color: transparent;
   }
   100% {
-    background-color: #ccc;
+    background-color: #754043;
   }
 }
 .btn-outline-secondary-me {
-  color: #ffd369;
+  color: #754043;
   border-color: #6c757d;
   transition: 0.3s;
 }
 .btn-outline-secondary-me:hover {
-  color: #ffd369;
-  background-color: #393e46;
-  border-color: #eeeeee;
+  color: #754043;
+  background-color: #dbd3d8;
+  border-color: #6c757d;
 }
 .btn-zoom-me:hover {
-  padding: 1rem 2rem;
+  padding: 1.5rem 3rem;
+  font-size: 1.75rem;
 }
