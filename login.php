@@ -1,3 +1,33 @@
+<?php
+   include("dbconfig.php");
+   session_start();
+   
+   if($_SERVER["REQUEST_METHOD"] == "POST") {
+      
+      $myusername = mysqli_real_escape_string($dbi,$_POST['user']);
+      $mypassword = mysqli_real_escape_string($dbi,$_POST['pswd']); 
+      
+      $sql = "SELECT `id-account` FROM  account WHERE username = '$myusername' and password = '$mypassword'";
+      echo $sql;
+      $result = mysqli_query($dbi,$sql);
+      $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+      $count = mysqli_num_rows($result);
+      echo $count;
+		
+      if($count == 1) {
+         $_SESSION['login_user'] = $myusername;
+         echo "here";
+        header("location: index.html");
+      }else {
+        echo "there";
+         header("location: login.php");
+      }
+   }
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -56,11 +86,12 @@
           <div class="col-md-6 col-lg-4">
             <div class="login-wrap p-0">
               <h3 class="mb-4 text-center">Login</h3>
-              <form action="#" class="signin-form">
+              <form action="login.php" method="Post" class="signin-form">
                 <div class="form-group">
                   <input
                     type="text"
                     class="form-control"
+                    name="user"
                     placeholder="Username"
                     required
                   />
@@ -69,6 +100,7 @@
                   <input
                     id="password-field"
                     type="password"
+                    name="pswd"
                     class="form-control"
                     placeholder="Password"
                     required
