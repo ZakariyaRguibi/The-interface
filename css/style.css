@@ -31,10 +31,10 @@
     background-color: #754043;
   }
   49% {
-    background-color: #754043;
+    background-color: transparent;
   }
   50% {
-    background-color: transparent;
+    background-color: #754043;
   }
   99% {
     background-color: transparent;
