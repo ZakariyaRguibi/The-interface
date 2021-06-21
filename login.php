@@ -1,6 +1,8 @@
 <?php
    include("dbconfig.php");
-   session_start();
+
+    session_start();
+
    
    if($_SERVER["REQUEST_METHOD"] == "POST") {
       
@@ -8,7 +10,6 @@
       $mypassword = mysqli_real_escape_string($dbi,$_POST['pswd']); 
       
       $sql = "SELECT `id-account` FROM  account WHERE username = '$myusername' and password = '$mypassword'";
-      echo $sql;
       $result = mysqli_query($dbi,$sql);
       $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
       $count = mysqli_num_rows($result);
@@ -17,7 +18,7 @@
       if($count == 1) {
          $_SESSION['login_user'] = $myusername;
          echo "here";
-        header("location: index.html");
+        header("location: panel.php");
       }else {
         echo "there";
          header("location: login.php");
